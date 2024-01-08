@@ -1,3 +1,5 @@
+/* eslint-disable guard-for-in */
 export default function setFromArray(arr) {
-  return new Set(arr);
+  const newSet = new Set(arr);
+  return newSet;
 }

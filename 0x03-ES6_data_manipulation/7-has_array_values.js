@@ -1,4 +1,10 @@
-// Function that returns a boolean value if all elements of an array exist within the set.
+/* eslint-disable consistent-return */
+/* eslint-disable guard-for-in */
 export default function hasValuesFromArray(set, array) {
-  return array.every((element) => set.has(element));
+  for (const prop of array) {
+    if (!set.has(prop)) {
+      return false;
+    }
+  }
+  return true;
 }
